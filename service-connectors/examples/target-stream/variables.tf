@@ -4,6 +4,7 @@
 variable "tenancy_ocid" {}
 variable "home_region" {description = "Your tenancy home region"}
 variable "region" {description = "Your tenancy region"}
+variable "secondary_region" {description = "Your tenancy secondary region"}
 variable "user_ocid" {default = ""}
 variable "fingerprint" {default = ""}
 variable "private_key_path" {default = ""}

@@ -1,3 +1,9 @@
+# December 09, 2024 Release Notes - 0.2.0
+
+## Updates
+1. [Service Connectors module](./service-connectors/)
+    - Bug fix: syntax fix in IAM policy when Service Connector target is an OCI stream.
+
 # September 20, 2024 Release Notes - 0.1.9
 
 ## Updates
