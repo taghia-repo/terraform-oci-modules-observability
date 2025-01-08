@@ -56,6 +56,7 @@ variable "logging_configuration" {
     })),{})
     custom_logs = optional(map(object({
       name               = string
+      compartment_id     = optional(string)
       log_group_id       = string
       dynamic_groups     = list(string)
       parser_type        = optional(string)

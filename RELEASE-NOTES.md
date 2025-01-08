@@ -1,3 +1,9 @@
+# December 18, 2024 Release Notes - 0.2.1
+
+## Updates
+1. [Logging module](./logging/)
+    - Bug fix: *compartment_id* attribute added to *custom_logs* attribute and respective logic added to *oci_logging_unified_agent_configuration* resource for taking a literal OCID or a reference to an OCID.
+
 # December 09, 2024 Release Notes - 0.2.0
 
 ## Updates

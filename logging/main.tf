@@ -59,7 +59,7 @@ resource "oci_logging_log" "these_custom" {
 
 resource "oci_logging_unified_agent_configuration" "these" {
   for_each = var.logging_configuration.custom_logs != null ? var.logging_configuration.custom_logs : {}
-    compartment_id = each.value.compartment_id != null ? each.value.compartment_id : var.logging_configuration.default_compartment_id
+    compartment_id = each.value.compartment_id != null ? (length(regexall("^ocid1.*$", each.value.compartment_id)) > 0 ? each.value.compartment_id : var.compartments_dependency[each.value.compartment_id].id) : (length(regexall("^ocid1.*$", var.logging_configuration.default_compartment_id)) > 0 ? var.logging_configuration.default_compartment_id : var.compartments_dependency[var.logging_configuration.default_compartment_id].id)
     is_enabled     = each.value.is_enabled
     description    = format("%s%s", "Agent configuration for ", each.value.name)
     display_name   = format("%s%s", "Agent_", each.value.name)
