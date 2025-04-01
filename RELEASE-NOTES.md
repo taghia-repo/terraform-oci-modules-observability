@@ -1,3 +1,9 @@
+# April 01, 2025 Release Notes - 0.2.2
+
+## Updates
+1. [Events module](./events/)
+    - Event *com.oraclecloud.identitysignon.interactivelogin* added to IAM pre-configured events.
+
 # December 18, 2024 Release Notes - 0.2.1
 
 ## Updates

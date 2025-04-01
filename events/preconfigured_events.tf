@@ -23,7 +23,8 @@ locals {
                     "com.oraclecloud.identitycontrolplane.deleteuser",
                     "com.oraclecloud.identitycontrolplane.updateuser",
                     "com.oraclecloud.identitycontrolplane.updateusercapabilities",
-                    "com.oraclecloud.identitycontrolplane.updateuserstate"]
+                    "com.oraclecloud.identitycontrolplane.updateuserstate",
+                    "com.oraclecloud.identitysignon.interactivelogin"]
     }
     network = {
       description = "CIS Landing Zone network events."
