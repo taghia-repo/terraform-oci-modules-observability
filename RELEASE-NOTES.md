@@ -1,3 +1,9 @@
+# April 28, 2025 Release Notes - 0.2.3
+
+## Updates
+1. [Streams module](./streams/)
+    - Lifecycle argument *create_before_destroy = true* removed from *oci_streaming_stream_pool* resource.
+
 # April 01, 2025 Release Notes - 0.2.2
 
 ## Updates

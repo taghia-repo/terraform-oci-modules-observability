@@ -4,7 +4,6 @@
 ## Stream pools
 resource "oci_streaming_stream_pool" "these" {
   lifecycle {
-    create_before_destroy = true
     precondition {
       condition = (each.value.compartment_id != null || var.streams_configuration.default_compartment_id != null)
       error_message = "VALIDATION FAILURE in \"${each.key}\" Stream Pool: You must set either \"compartment_id\" or \"default_compartment_id\"."
