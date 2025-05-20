@@ -105,8 +105,8 @@ resource "oci_logging_unified_agent_configuration" "these" {
           for_each = coalesce(each.value.parser_type, "NONE") == "MULTILINE" ? [1] : []
           content {
             parser_type      = "MULTILINE"
-            format           = ""
-            format_firstline = ""
+            format           = each.value.format
+            format_firstline = each.value.format_firstline
           }
         }
         dynamic "parser" {

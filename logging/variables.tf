@@ -65,6 +65,8 @@ variable "logging_configuration" {
       retention_duration = optional(number,90)
       defined_tags       = optional(map(string))
       freeform_tags      = optional(map(string))
+      format             = optional(list(string))           
+      format_firstline   = optional(string)
     })),{})
   })
 }
